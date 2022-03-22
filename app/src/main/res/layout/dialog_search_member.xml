@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+    <FrameLayout
+    android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+    <androidx.cardview.widget.CardView
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        app:cardElevation="@dimen/dialog_member_cv_elevation"
+        app:cardCornerRadius="@dimen/dialog_member_cv_cornerRadius"
+        android:background="@drawable/shape_dialog_rounded">
+
+
+    <LinearLayout
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:padding="@dimen/dialog_member_content_padding"
+        android:orientation="vertical"
+        android:gravity="center">
+
+    <TextView
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:padding="@dimen/dialog_member_title_padding" android:textStyle="bold"
+        android:textSize="@dimen/dialog_member_title_text_size"
+        android:textColor="@color/primary_text_color"
+        android:text="@string/search_member"
+        android:id="@+id/tvDialogTitle"/>
+
+    <View
+        android:layout_height="@dimen/member_dialog_divider_height"
+        android:layout_width="match_parent"
+        android:background="@color/divider_color"
+        android:layout_marginBottom="@dimen/member_dialog_divider_marginTopBottom"
+        android:layout_marginTop="@dimen/member_dialog_divider_marginTopBottom"/>
+
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:layout_marginTop="@dimen/member_dialog_til_email_marginTop">
+
+    <androidx.appcompat.widget.AppCompatEditText
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:textSize="@dimen/et_text_size"
+        android:id="@+id/et_email_search_member"
+        android:inputType="textEmailAddress"
+        android:hint="@string/email"/>
+
+</com.google.android.material.textfield.TextInputLayout>
+
+
+    <LinearLayout
+        android:layout_height="@dimen/member_dialog_action_layout_height"
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:layout_marginTop="@dimen/member_dialog_action_layout_marginTop">
+
+    <TextView
+        android:layout_height="match_parent"
+        android:layout_width="0dp"
+        android:background="?attr/selectableItemBackground"
+        android:padding="@dimen/member_dialog_action_button_padding"
+        android:gravity="center"
+        android:textSize="@dimen/member_dialog_action_button_text_size"
+        android:textColor="@color/colorAccent"
+        android:text="@string/add" android:id="@+id/tv_add"
+        android:layout_weight="1"/>
+
+    <TextView
+        android:layout_height="match_parent"
+        android:layout_width="0dp"
+        android:background="?attr/selectableItemBackground"
+        android:padding="@dimen/member_dialog_action_button_padding"
+        android:gravity="center"
+        android:textSize="@dimen/member_dialog_action_button_text_size"
+        android:textColor="@color/secondary_text_color"
+        android:text="@string/cancel"
+        android:id="@+id/tv_cancel"
+        android:layout_weight="1"/>
+
+</LinearLayout>
+
+</LinearLayout>
+
+</androidx.cardview.widget.CardView>
+
+</FrameLayout>

@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+    <LinearLayout
+    tools:context=".activities.CardDetailsActivity"
+    android:orientation="vertical"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:theme="@style/AppThemeAppBarOverlay">
+
+    <androidx.appcompat.widget.Toolbar
+        android:layout_height="?attr/actionBarSize"
+        android:layout_width="match_parent"
+        app:popupTheme="@style/AppThemePopupOverlay"
+        android:background="?attr/colorPrimary"
+        android:id="@+id/toolbar_card_details_activity"/>
+
+</com.google.android.material.appbar.AppBarLayout>
+
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:background="@drawable/ic_background"
+        android:padding="@dimen/card_details_content_padding">
+
+
+    <androidx.cardview.widget.CardView
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        app:cardCornerRadius="@dimen/card_view_corner_radius"
+        android:elevation="@dimen/card_view_elevation"
+        android:layout_marginBottom="@dimen/card_details_cv_card_name_marginBottom">
+
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:padding="@dimen/card_details_cv_content_padding"
+        android:gravity="center_horizontal">
+
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent">
+
+    <androidx.appcompat.widget.AppCompatEditText
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:id="@+id/et_name_card_details"
+        tools:text="Test"
+        android:textSize="@dimen/et_text_size"
+        android:inputType="text"
+        android:hint="@string/hint_card_name"/>
+
+</com.google.android.material.textfield.TextInputLayout>
+
+</LinearLayout>
+
+</androidx.cardview.widget.CardView>
+
+
+    <androidx.cardview.widget.CardView
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        app:cardCornerRadius="@dimen/card_view_corner_radius"
+        android:elevation="@dimen/card_view_elevation">
+
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:padding="@dimen/card_details_cv_content_padding"
+        android:gravity="center_horizontal">
+
+    <TextView
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:text="@string/label_color"
+        android:textSize="@dimen/card_details_label_text_size"
+        android:textColor="@color/secondary_text_color"/>
+
+    <TextView
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:id="@+id/tv_select_label_color"
+        android:padding="@dimen/card_details_value_padding"
+        android:text="@string/select_color"
+        android:textColor="@color/primary_text_color"
+        android:layout_marginTop="@dimen/card_details_value_marginTop"/>
+
+    <TextView
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:text="@string/members"
+        android:textSize="@dimen/card_details_label_text_size"
+        android:textColor="@color/secondary_text_color"
+        android:layout_marginTop="@dimen/card_details_members_label_marginTop"/>
+
+    <TextView
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:id="@+id/tv_select_members"
+        android:padding="@dimen/card_details_value_padding"
+        android:text="@string/select_members"
+        android:textColor="@color/primary_text_color"
+        android:layout_marginTop="@dimen/card_details_value_marginTop"
+        tools:visibility="gone"
+        android:visibility="visible"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:id="@+id/rv_selected_members_list"
+        android:layout_marginTop="@dimen/card_details_value_marginTop"
+        tools:visibility="visible"
+        android:visibility="gone"/>
+
+    <TextView
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:text="@string/due_date"
+        android:textSize="@dimen/card_details_label_text_size"
+        android:textColor="@color/secondary_text_color"
+        android:layout_marginTop="@dimen/card_details_members_label_marginTop"/>
+
+    <TextView
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:id="@+id/tv_select_due_date"
+        android:padding="@dimen/card_details_value_padding"
+        android:text="@string/select_due_date"
+        android:textColor="@color/primary_text_color"
+        android:layout_marginTop="@dimen/card_details_value_marginTop"/>
+
+    <Button
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:background="@drawable/shape_button_rounded"
+        android:id="@+id/btn_update_card_details"
+        android:gravity="center"
+        android:text="@string/update"
+        android:textSize="@dimen/btn_text_size"
+        android:textColor="@android:color/white"
+        android:layout_marginTop="@dimen/card_details_update_btn_marginTop"
+        android:paddingBottom="@dimen/btn_paddingTopBottom"
+        android:paddingTop="@dimen/btn_paddingTopBottom"
+        android:foreground="?attr/selectableItemBackground"
+        android:layout_gravity="center"/>
+
+</LinearLayout>
+
+</androidx.cardview.widget.CardView>
+
+</LinearLayout>
+
+</LinearLayout>
